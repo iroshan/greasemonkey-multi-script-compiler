@@ -49,12 +49,13 @@ $data=array(
 	'minVersion'  => '1.5',
 	'maxVersion'  => '3.0.*',
 	'updateURL' => '',
+	'updateKey' => '',
 	'icon' => false,
 	'tabs' => array("General"),
 	'helpMsg' => '',
 );
 foreach (array(
-	'guid', 'name', 'description', 'creator', 'homepage', 'minVersion', 'maxVersion', 'updateURL', 'helpMsg'
+	'guid', 'name', 'description', 'creator', 'homepage', 'minVersion', 'maxVersion', 'updateURL', 'updateKey', 'helpMsg'
 ) as $k) {
 	if (!empty($GMSC[$k])) $data[$k]=$GMSC[$k];
 }
@@ -209,6 +210,7 @@ if ($package_mode=="amo") {
 	// Mozilla Add-ons mode is just like dist mode except without the updateURL
 	$package_mode="dist";
 	$data["updateURL"]="";
+	$data["updateKey"]="";
 } 
 
 $smarty->assign('data', $data);

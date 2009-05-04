@@ -14,6 +14,8 @@
                    {/if}
                    {if $data.updateURL} em:updateURL="{$data.updateURL}" 
                    {/if}
+                   {if $data.updateKey} em:updateKey="{$data.updateKey}"
+                   {/if}
                    em:homepageURL="{$data.homepage}">
 
 
